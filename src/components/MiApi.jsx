@@ -71,7 +71,8 @@ const MiApi = () => {
                             Filtros disponibles
                         </button>
                         <ul className="dropdown-menu container text-center">
-                            <li><a className="dropdown-item" onClick={() => ordenarLista((apiContent.sort((a, b) => a.population < b.population)))}>Ordenar por mayor población</a></li>
+                            <li><a className="dropdown-item" onClick={() => ordenarLista((apiContent.sort((a, b) => b.population - a.population)))}>Ordenar por mayor población</a></li>
+                            <li><a className="dropdown-item" onClick={() => ordenarLista((apiContent.sort((a, b) => a.population - b.population)))}>Ordenar por mayor población</a></li>
                         </ul>
                     </div>
                 </div>
